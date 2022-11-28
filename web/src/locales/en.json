@@ -1,0 +1,76 @@
+{
+    "signup": {
+        "create": "Create your account",
+        "google": "Sign-in with Google",
+        "already": "Already have an account ?",
+        "signin": "Sign in",
+        "username": "Username",
+        "firstname": "Firstname",
+        "lastname": "Lastname"
+    },
+    "navbar": {
+        "search" : "Search...",
+        "post" : "Post"
+    },
+    "aside-right" : {
+        "messages" : "Messages",
+        "trending" : "Trending",
+        "suggestions" : "Suggestions",
+        "suggestions" : "Suggestions",
+        "show-more" : "Show more"
+    },
+    "aside-left" : {
+        "home" : "Home",
+        "links" : "Links",
+        "notifications" : "Notifications",
+        "messages" : "Messages",
+        "bookmarks" : "Bookmarks",
+        "settings" : "Settings",
+        "logout" : "Logout",
+        "themes" : "Themes"
+    },
+    "account": {
+        "edit-background" : "Edit",
+        "profile" : "Profile",
+        "edit-profil" : "Edit Porfil",
+        "infos-stats" : {
+            "followers" : "Followers",
+            "following" : "Following",
+            "posts" : "Posts"
+        },
+        "onglets" : {
+            "posts" : "POSTS",
+            "reposts" : "REPOSTS",
+            "likes" : "LIKES",
+            "favoris" : "BOOKMARKS"
+        },
+        "sub": "Subscribe"
+    },
+    "pop-up" : {
+        "post" : {
+            "what-s-up" : "What's up ?",
+            "post" : "Post"
+        }
+    },
+    "post" : {
+        "comment-shared" : {
+            "comment" : "comments",
+            "shared" : "shared"
+        },
+        "liked" : "Liked by"
+    },
+    "date": {
+        "jan": "January",
+        "feb": "February",
+        "mar": "March",
+        "apr": "April",
+        "may": "May",
+        "jun": "June",
+        "jul": "July",
+        "aug": "August",
+        "sep": "September",
+        "oct": "October",
+        "nov": "November",
+        "dec": "December"
+    }
+}

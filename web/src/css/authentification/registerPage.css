@@ -1,0 +1,518 @@
+/* ============ Page Authentification ========== */
+
+.RegisterComponents {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: #fff;
+}
+
+.inner-block {
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  background-color: #24334a;
+  width: 400px;
+  height: 450px;
+}
+
+.container_illustration {
+  /* max-width: 400px;
+  width: 100%; */
+  grid-area: 1 / 1 / 6 / 4;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container_box_register {
+  grid-area: 1 / 4 / 6 / 7;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-bubble-illustration {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.bubble_illustration {
+  width: 400px;
+  position: relative;
+  top: -10px;
+}
+
+.illustration_login {
+  width: 300px;
+  max-width: 400px;
+  min-width: 300px;
+  position: relative;
+  left: -135px;
+  transition: var(--tran-03);
+}
+
+.illustration_signup {
+  width: 100%;
+  max-width: 500px;
+  min-width: 500px;
+  position: relative;
+  left: -35px;
+  transition: var(--tran-03);
+}
+
+.container_box_register_title_logo {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  top: -20px;
+}
+
+#logo {
+  width: 100%;
+}
+
+.container_box_register_title_logo .title {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #05090d;
+  text-align: center;
+  width: 100%; 
+  margin-right: 10px; 
+}
+
+.vue-tempalte h3 {
+  text-align: start;
+  margin: 0;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 500;
+  border-left: solid 4px #58BDFF;
+  padding-left: 10px;
+  position: relative;
+  top: -13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+
+.form-group-confirmationEmail {
+  margin-bottom: -10px;
+}
+
+.form-group-email {
+  margin-bottom: -10px;
+}
+
+.form-group-username {
+  margin-bottom: -10px;
+}
+
+.form-group-password {
+  margin-bottom: -10px;
+}
+
+.form-group-confirmationPassword {
+  margin-bottom: -10px;
+}
+
+.form-group-firstName {
+  margin-bottom: -10px;
+}
+
+.form-group-lastName {
+  margin-bottom: -10px;
+}
+
+
+
+input.form-control.form-control-lg {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid #58BDFF;
+  background-color: #24334a;
+  ;
+  padding: 3px 12px 3px 30px;
+  margin: 6px 0;
+  border-radius: 4px;
+}
+
+input.form-control.form-control-lg:focus {
+  border: 1px solid #58BDFF;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  outline: 0 none;
+}
+
+input.form-control.form-control-lg.form-control-password {
+  border: 1px solid #e1baba;
+}
+
+label.container {
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.btn-authentication {
+  align-self: flex-end;
+  width: 100%;
+  height: 40px;
+  margin-top: 2rem;
+  box-shadow: 0 5px 5px #00000020;
+  border: none;
+  background-color: #58BDFF;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  border-radius: 5px;
+}
+
+.btn-authentication:active {
+  box-shadow: none;
+}
+
+.btn-authentication:hover {
+  background: #05090d;
+}
+
+.btn-authentication-signup {
+  align-self: flex-end;
+  width: 100%;
+  height: 40px;
+  margin-top: 1rem;
+  box-shadow: 0 5px 5px #00000020;
+  border: none;
+  background-color: #58BDFF;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  border-radius: 5px;
+
+}
+
+.btn-authentication-signup:active {
+  box-shadow: none;
+}
+
+.btn-authentication-signup:hover {
+  background: #05090d;
+}
+
+.vue-tempalte .btn-next {
+  align-self: flex-end;
+  width: 100%;
+  height: 40px;
+  margin-top: 1rem;
+  box-shadow: 0 5px 5px #00000020;
+  border: none;
+  background-color: #58BDFF;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  border-radius: 5px;
+}
+
+
+.vue-tempalte .btn-next:active {
+  box-shadow: none;
+}
+
+.vue-tempalte .btn-next:hover {
+  background: #2c76b3;
+}
+
+.form-group-username-lg span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 370px;
+  top: 263px;
+}
+
+.form-group-password-lg span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 370px;
+  top: 338px;
+}
+
+.form-group-password span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 370px;
+  top: 340px;
+}
+
+.form-group-firstName span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 370px;
+  top: 270px
+}
+
+.form-group-lastName span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 370px;
+  top: 335px
+}
+
+.form-group-username span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 370px;
+  top: 405px;
+}
+
+.form-group-email span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 395px;
+  top: 207px;
+}
+
+.form-group-confirmationEmail span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 312px;
+  top: 275px;
+}
+
+.form-group-confirmationPassword span {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  right: 285px;
+  top: 415px;
+}
+
+input.form-control.form-control-lg:focus~span,
+input.form-control.form-control-lg:valid~span {
+  transform: translateX(-10px) translateY(-30px);
+  font-size: 12px;
+  opacity: 1;
+
+}
+
+
+
+.vertical-center .form-control:focus {
+  border-color: #2554ff;
+  box-shadow: none;
+}
+
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+}
+
+.or {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #dee3e4;
+  position: relative;
+  margin: 20px 0;
+}
+
+.or:before {
+  content: 'or';
+  width: 40px;
+  height: 18px;
+  position: absolute;
+  top: -5px;
+  right: calc(50% - 20px);
+  background-color: #fff;
+  text-align: center;
+  line-height: 10px;
+  color: #fff;
+  background-color: #24334a;
+}
+
+/*.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7a7a7a;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #2554ff;
+}
+*/
+
+.social-icons {
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1em;
+  color: #222222;
+
+}
+
+.social-icons .btn-google {
+  color: rgb(255, 255, 255);
+  background: #24334a;
+  border: solid 1px #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px #00000020;
+  border-color: #58BDFF;
+  height: 40px;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 4px;
+}
+
+.btn-google img {
+  width: 20px;
+  margin-right: 1rem;
+}
+
+.foot {
+  font-size: 12px;
+  color: #22222287;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.foot p {
+  text-align: center;
+}
+
+.link {
+  color: #58BDFF;
+  font-weight: bold;
+}
+
+i.bx.bxs-user {
+  position: relative;
+  left: 5px;
+  bottom: 35px;
+  font-size: 20px;
+  color: white
+}
+
+i.bx.bx-key {
+  position: relative;
+  left: 4px;
+  bottom: 40px;
+  font-size: 25px;
+  color: white;
+}
+
+i.bx.bx-left-arrow-alt {
+  position: relative;
+  left: -25px;
+  bottom: 25px;
+  font-size: 25px;
+  color: white;
+
+}
+
+i.bx.bx-left-arrow-alt:hover {
+  background: #75808b;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-transform: scale(1.1);
+}
+
+i.bx.bxs-envelope {
+  position: relative;
+  left: 5px;
+  bottom: 35px;
+  font-size: 20px;
+  color: white
+}
+
+i.bx.bx-show-alt {
+  position: relative;
+  left: 240px;
+  bottom: 41px;
+  font-size: 18px;
+  color: white;
+  opacity: 0.5;
+  ;
+}
+
+i.bx.bx-low-vision {
+  position: relative;
+  left: 240px;
+  bottom: 41px;
+  font-size: 18px;
+  color: white;
+  opacity: 0.5;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  left: 80px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+  right: 110px;
+  top: 7px;
+  height: 20px;
+  width: 20px;
+}

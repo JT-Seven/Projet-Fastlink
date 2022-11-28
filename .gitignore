@@ -1,0 +1,49 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/.idea/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Application Configuration ###
+/bootstrap.yml
+/config-server/src/main/resources/application.yml
+/gatewayservice/src/main/resources/bootstrap.yml
+/mediaservice/src/main/resources/bootstrap.yml
+/mediastorageservice/src/main/resources/bootstrap.yml
+/messageservice/src/main/resources/bootstrap.yml
+/service-discovery-server/src/main/resources/bootstrap.yml
+/userservice/src/main/resources/bootstrap.yml
+/mediaservice/src/main/resources/bootstrap.properties
+/authservice/src/main/resources/bootstrap.yml
+config-server/src/main/resources/application.yml
+bootstrap.*
+application.yml
+application.properties

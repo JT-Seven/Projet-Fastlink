@@ -1,0 +1,451 @@
+.blur-effect {
+    position: fixed;
+    top: 20px;
+    width: 260px;
+    height: calc(100% - 40px);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+.overlay {
+    top: -60px;
+}
+.contents-viewMsg {
+    box-shadow: var(--boxshadow-04);
+}
+.overlay-msg {
+    position: absolute;
+    visibility: hidden;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/*==============CONTENTS-LEFT==========*/
+
+.container-messages {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: calc(100% - 60px);
+    width: 100%;
+    position: fixed;
+    z-index: 990;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: var(--tran-03);
+    visibility: hidden;
+    padding: 20px 80px 20px 115px;
+    background: var(--body-color);
+}
+.container-messages .layout-right {
+    grid-area: 1 / 1 / 6 / 6;
+    width: calc(100% - 268px);
+    margin-left: 268px;
+    position: relative;
+    padding: 0px 0 62px 0px;
+}
+.container-messages .layout-left {
+    grid-area: 1 / 1 / 6 / 2;
+    width: 268px;
+    border-top-left-radius: 10px;
+}
+.container-messages .box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    background: var(--sidebar-color);
+    border-top-left-radius: 10px;
+    position: relative;
+    height: 70px;
+    border-right: var(--separator-conv-msg);
+}
+.container-messages .box-title h2 {
+    font-size: var(--text-size-01);
+    font-weight: 500;
+}
+.container-messages .box-title .btn-create {
+    position: absolute;
+    right: 10px;
+    top: 0.9rem;
+    transform: scale(1.1);
+    display: flex;
+    padding: 10px;
+    border-radius: 50%;
+    transition: var(--tran-05);
+}
+.container-messages .box-title .btn-create ion-icon {
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+.container-messages .container-scroll-conversation {
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    border: 5px solid var(--sidebar-color);
+    border-right: .1px solid var(--sidebar-color);
+    border-top: none;
+    position: relative;
+}
+.container-messages .layout-conversation {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: var(--color-white);
+    transition: var(--tran-03);
+    cursor: pointer;
+}
+.container-messages .layout-conversation:hover {
+    background: var(--hover-conversation);
+}
+.container-messages .layout-conversation .name-msg {
+    display: flex;
+    flex-direction: column;
+}
+.img-user {
+    height: 40px;
+    width: 40px;
+    background: #4935C7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+img {
+    width: 26px;
+    border-radius: 50%;
+}
+.container-messages .layout-conversation .name-user {
+    font-weight: 600;
+}
+.container-messages .layout-conversation .msg {
+    white-space: pre;
+    overflow: hidden;
+    width: 155px;
+}
+.container-messages .layout-conversation .indicator-newMsg {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-red);
+}
+
+/*==============CONTENTS-RIGHT==========*/
+
+/*==============Box-Top==========*/
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: var(--sidebar-color);
+    border-bottom: 1px solid var(--color-gray);
+    height: 70px;
+    border-top-right-radius: 10px;
+}
+.box-top .box-user {
+    display: flex;
+    align-items: center;
+}
+.box-top .box-user .img-user {
+    height: 42px;
+    width: 42px;
+    background: #4935C7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.box-top .box-user .img-user img {
+    width: 28px;
+    border-radius: 50%;
+}
+.box-top .box-user .name-status {
+    display: flex;
+    flex-direction: column;
+}
+.box-top .option-info .btn-info {
+    height: 39.2px;
+    width: 39.2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: var(--tran-05);
+}
+.box-top .option-info .btn-info .bx {
+    font-size: 1.2rem;
+}
+
+/*==============Box-Bottom==========*/
+
+.box-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sidebar-color);
+    border-bottom-right-radius: 10px;
+}
+
+.box-bottom svg {
+    width: 18px;
+    cursor: pointer;
+    color: var(--primary-color);
+    filter: var(--icon-white);
+}
+.box-bottom .box-hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--tran-03);
+    cursor: pointer;
+    margin-right: 5px;
+}
+.box-bottom .box-hover:hover {
+    background: #52a0fe38;
+}
+.box-bottom .box-hover label {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+.box-bottom .media-smileys {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    margin-right: 5px;
+}
+.box-bottom .msgCounter-msg {
+    margin-right: 15px;
+    border-right: 0.1px solid var(--timeline-color);
+    padding-right: 15px;
+    color: var(--primary-color);
+}
+.box-bottom .text-btnSend {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.box-bottom .text-btnSend .btn-send {
+    border-radius: 50%;
+    transition: var(--tran-05);
+    height: 42px;
+    width: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    outline: none;
+    pointer-events: none;
+}
+.box-bottom .text-btnSend .btn-send.btnEnable {
+    opacity: 1;
+    outline: none;
+    pointer-events: auto;
+}
+.box-bottom .text-btnSend .btn-send:hover {
+    background: #52a0fe;
+    box-shadow: var(--boxshadow-01);
+    color: #fff;
+}
+.box-bottom .text-btnSend textarea {
+    outline: none;
+    width: 93%;
+    height: 40px;
+    background: none;
+    max-height: 140px;
+    background: var(--body-color);
+    border-radius: 25px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 9px 0px 0px 20px;
+    margin-right: 17px;
+    font-size: .8rem;
+}
+.box-bottom .text-btnSend textarea:focus {
+    border: 0.1px solid var(--color-secondary);
+}
+
+/*==============CONVERSATION-MESSAGES==========*/
+
+.contents-conversation {
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+.contents-conversation .box-date {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents-conversation .box-date .date {
+    padding: 20px;
+}
+.contents-conversation .box-date .date::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 28.4px;
+    width: 46%;
+    height: 0.1px;
+    opacity: .2;
+    background: var(--text06-color);
+}
+.contents-conversation .box-date .date::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 28.4px;
+    width: 46%;
+    height: 0.1px;
+    opacity: .2;
+    background: var(--text06-color);
+}
+
+/*==============CONVERSATION-MESSAGES-ITEM==========*/
+
+.container-bubble-msg {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.bubble {
+    margin: 10px 0;
+    color: #f1f1f1;
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+}
+.bubble .msg {
+    padding: 8px 20px;
+    line-height: 20px;
+    border-radius: 20px 20px 20px 0;
+    background: var(--bubble-friend-color);
+    max-width: 85%;
+    word-break: break-all;
+}
+.bubble-right {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.firstBubble {
+    position: absolute;
+}
+.bubble-right .msg {
+    margin-right: 15px;
+    border-radius: 20px 20px 0px 20px;
+    background: #52a0fe;
+}
+
+#cross {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.2rem;
+    font-size: 1.6rem;
+    transition: var(--tran-03);
+    color: var(--primary-color);
+}
+#input-media {
+    transform: scale(.6);
+    outline: none;
+    opacity: 0;
+    position: absolute;
+    width: 30px;
+    z-index: 5;
+    cursor: pointer;
+    height: 35px;
+    left: -2px;
+    top: -4px;
+}
+.container-messages .container-scroll-conversation::-webkit-scrollbar {
+    width: 3.5px;
+}
+.container-messages .container-scroll-conversation::-webkit-scrollbar-track {
+    background: var(--track-color-msg);
+    border-bottom-right-radius: 20px;
+}
+.container-messages .container-scroll-conversation::-webkit-scrollbar-thumb {
+    background-color: var(--thumb-color-msg);
+    border-radius: 20px;
+}
+.contents-conversation::-webkit-scrollbar {
+    width: 5px;
+}
+.contents-conversation::-webkit-scrollbar-track {
+    background: var(--track-color-msg);
+}
+.contents-conversation::-webkit-scrollbar-thumb {
+    background-color: var(--thumb-color-msg);
+    border-radius: 20px;
+}
+textarea::-webkit-scrollbar {
+    width: 0px;
+}
+textarea::placeholder {
+    line-height: 20px;
+    font-size: .8rem;
+}
+
+/*==============BACKGROUND ANIMATE==========*/
+
+.area {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: -4rem;
+}
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: url('../../assets//message.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .6;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: .6;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/*==============RELOAD PAGE==========*/
+
+.reload-message {
+    transform: translateY(0);
+    visibility: visible;
+}

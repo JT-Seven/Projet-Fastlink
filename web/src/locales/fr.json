@@ -1,0 +1,75 @@
+{
+    "signup": {
+        "create": "Créer votre compte",
+        "google": "Connectez-vous avec Google",
+        "already": "Vous avez déjà un compte ?",
+        "signin": "Connectez-vous",
+        "username": "Pseudo",
+        "firstname": "Prénom",
+        "lastname": "Nom"
+    },
+    "navbar": {
+        "search" : "Recherche...",
+        "post" : "Poster"
+    },
+    "aside-right" : {
+        "messages" : "Messages",
+        "trending" : "Tendances",
+        "suggestions" : "Suggestions",
+        "show-more" : "Voir plus"
+    },
+    "aside-left" : {
+        "home" : "Accueil",
+        "links" : "Abonnements",
+        "notifications" : "Notifications",
+        "messages" : "Messages",
+        "bookmarks" : "Favoris",
+        "settings" : "Paramètres",
+        "logout" : "Déconnexion",
+        "themes" : "Thèmes"
+    },
+    "account": {
+        "edit-background" : "Modifier",
+        "profile" : "Profile",
+        "edit-profil" : "Modifier profil",
+        "infos-stats" : {
+            "followers" : "Abonnés",
+            "following" : "Abonnements",
+            "posts" : "Publications"
+        },
+        "onglets" : {
+            "posts" : "PUBLICATIONS",
+            "reposts" : "PARTAGÉS",
+            "likes" : "AIMÉS",
+            "favoris" : "FAVORIS"
+        },
+        "sub": "S'abonner"
+    },
+    "pop-up" : {
+        "post" : {
+            "what-s-up" : "Quoi de neuf ?",
+            "post" : "Poster"
+        }
+    },
+    "post" : {
+        "comment-shared" : {
+            "comment" : "commentaire",
+            "shared" : "partage"
+        },
+        "liked" : "aimé par"
+    },
+    "date": {
+        "jan": "Janvier",
+        "feb": "Février",
+        "mar": "Mars",
+        "apr": "Avril",
+        "may": "Mai",
+        "jun": "Juin",
+        "jul": "Juillet",
+        "aug": "Août",
+        "sep": "Septembre",
+        "oct": "Octobre",
+        "nov": "Novembre",
+        "dec": "Décembre"
+    }
+}
